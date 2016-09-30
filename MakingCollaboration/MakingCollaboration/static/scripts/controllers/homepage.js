@@ -36,11 +36,17 @@ webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFacto
 	};
 
 	$scope.chartClicked = function() {
-		CollaborationFactory.getCategory('JavaScript').then(function (result) {
-			console.log(result.data);
-			$scope.children = result.data.childrenData;
-		})
+		console.log('chartClicked');
+		$scope.showCategoryUsed = true;
 	};
 
+	$scope.chart2Clicked = function() {
+		$scope.showJavascript = true;
+	};
+
+	CollaborationFactory.getCategory('JavaScript').then(function (result) {
+		$scope.category = result.data;
+	});
+	
 	//$scope.open();
 }]);
