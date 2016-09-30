@@ -1,23 +1,126 @@
-<h1>Homepage</h1>
-<br/>
-<a href="#" class="btn btn-success" ng-click="open()" tooltip="Super easy!">Open Modal</a>
-<br/>
-<br/>
-<alert ng-if="selected.fruit" type="info" close="selected.fruit = false">{{selected.fruit}}</alert>
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+
+					<a href="#" class="btn btn-success" ng-click="open()">Me</a>
+					<br/>
+					<br/>
+					<alert ng-if="selected.fruit" type="info" close="selected.fruit = false">{{selected.fruit}}</alert>
 
 
-<script type="text/ng-template" id="myModalContent.html">
-	<div class="modal-header">
-		<h3 class="modal-title">Select Fruit</h3>
+					<script type="text/ng-template" id="myModalContent.html">
+						<div class="modal-header">
+							<h3 class="modal-title">I am a:</h3>
+						</div>
+						<div class="modal-body">
+							<span class="btn-group">
+							 	<input type="checkbox" /> Developer
+								<input type="checkbox" /> Designer
+								<input type="checkbox" /> PM
+
+								<!--<a ng-repeat="item in items" ng-click="selected.item = item"
+								   class="btn {{item == selected.item ? 'btn-primary' : 'btn-default' }}">{{ item }}</a>-->
+							</span>
+						</div>
+						<div class="modal-header">
+							<h3 class="modal-title">I am interested in:</h3>
+						</div>
+						<div class="modal-body">
+							<span class="btn-group">
+								<input type="checkbox" /> Front-end
+								<input type="checkbox" /> Back-end
+								<input type="checkbox" /> Design
+							</span>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-success" ng-click="cancel()">OK</button>
+							<button class="btn btn-default" ng-click="cancel()">Cancel</button>
+						</div>
+					</script>
+
+      <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Search for tech or people etc.." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
 	</div>
-	<div class="modal-body">
-		<span class="btn-group">
-			<a ng-repeat="item in items" ng-click="selected.item = item"
-			   class="btn {{item == selected.item ? 'btn-primary' : 'btn-default' }}">{{ item }}</a>
-		</span>
+</div>
+
+<div class="container main-categories">
+	<div class="row">
+        <div class="col-md-3 button">
+						<h1 ng-click="showTechUsed = !showTechUsed">Tech</h1>
+        </div>
+				<div class="col-md-5 button">
+						<h1>Design</h1>
+				</div>
+				<div class="col-md-3 button">
+						<h1>PM stuff</h1>
+				</div>
 	</div>
-	<div class="modal-footer">
-		<button class="btn btn-success" ng-click="ok()">OK</button>
-		<button class="btn btn-default" ng-click="cancel()">Cancel</button>
+</div>
+
+<div class="technologies" ng-show="showTechUsed">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Technologies used in our company:</h2>
+				<canvas id="pie" class="chart chart-pie" chart-click="chartClicked(o)"
+					chart-data="data" chart-labels="labels" chart-options="options">
+				</canvas>
+			</div>
+		</div>
 	</div>
-</script>
+</div>
+
+<div class="technologies" ng-show="children">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Technologies used in our company:</h2>
+				<canvas id="pie2" class="chart chart-pie" chart-click="chartClicked(o)"
+					chart-data="childrenData">
+				</canvas>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="" ng-show="showJavascript">
+	<h2 class="page-header">{{category.name}}</h2>
+	<div class="row">
+	    <div class="col-md-9">
+	        <div class="row">
+	        <section ng-repeat="section in category.sections" class="col-md-4">
+	            <h3>{{section.name}}</h3>
+	            <ul class="list-group">
+	                <li ng-repeat="article in section.articles" class="list-group-item">
+	                    <strong>{{article.rating}}</strong>
+	                    <button class="btn btn-default btn-xs" ng-click="article.rating = article.rating + 1"><span class="glyphicon glyphicon-arrow-up"></span></button>
+	                    <button class="btn btn-default btn-xs" ng-click="article.rating = article.rating - 1"><span class="glyphicon glyphicon-arrow-down"></span></button>
+	                    <a href="#">{{article.name}}</a>
+	                </li>
+	            </ul>
+	        </section>
+	    </div>
+	</div>
+	    <div class="col-md-3">
+	        <div class="well">
+	            <h3>People who knows {{category.name}}</h3>
+	            <ul class="list-group">
+	                <li ng-repeat="person in category.people" class="list-group-item">
+	                    <a href="#">{{person.name}}</a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+</div>

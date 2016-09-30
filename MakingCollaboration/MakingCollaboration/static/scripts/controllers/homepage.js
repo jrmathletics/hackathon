@@ -1,5 +1,8 @@
-webApp.controller('HomepageController', ['$scope', '$modal', function($scope, $modal){
+webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFactory', function($scope, $modal, CollaborationFactory){
 	$scope.items = ["Apple", "Orange", "Blueberry"];
+
+	$scope.labels = [".NET", "Javascript", "CSS"];
+  $scope.data = [300, 500, 100];
 
 	$scope.open = function(){
 		$modal.open({
@@ -31,4 +34,13 @@ webApp.controller('HomepageController', ['$scope', '$modal', function($scope, $m
 			console.log('Modal dismissed at: ' + new Date());
 		});
 	};
+
+	$scope.chartClicked = function() {
+		CollaborationFactory.getCategory('JavaScript').then(function (result) {
+			console.log(result.data);
+			$scope.children = result.data.childrenData;
+		})
+	};
+
+	//$scope.open();
 }]);
