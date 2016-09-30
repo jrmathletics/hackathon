@@ -1,4 +1,4 @@
-webApp = angular.module('WebApp', ['ngRoute', 'ui.bootstrap']);
+webApp = angular.module('WebApp', ['ngRoute', 'ui.bootstrap', 'chart.js']);
 
 webApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
