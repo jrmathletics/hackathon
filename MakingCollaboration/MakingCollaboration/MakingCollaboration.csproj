@@ -249,13 +249,9 @@
     <Content Include="App_Readme\Spring.Rest.txt" />
     <Content Include="App_Readme\Spring.Social.Core.txt" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="index.html" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -275,17 +271,50 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="static\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="static\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="static\bootstrap\css\bootstrap.css" />
+    <Content Include="static\bootstrap\css\bootstrap.min.css" />
+    <Content Include="static\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="static\bootstrap\js\bootstrap.js" />
+    <Content Include="static\bootstrap\js\bootstrap.min.js" />
+    <Content Include="static\bootstrap\js\npm.js" />
+    <Content Include="static\bootstrap\version.txt" />
+    <Content Include="static\scripts\app.js" />
+    <Content Include="static\scripts\controllers\homepage.js" />
+    <Content Include="static\scripts\libs\angular-chart.js" />
+    <Content Include="static\scripts\libs\angular-local-storage.js" />
+    <Content Include="static\scripts\libs\angular\angular-animate.js" />
+    <Content Include="static\scripts\libs\angular\angular-animate.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-aria.js" />
+    <Content Include="static\scripts\libs\angular\angular-aria.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-cookies.js" />
+    <Content Include="static\scripts\libs\angular\angular-cookies.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-csp.css" />
+    <Content Include="static\scripts\libs\angular\angular-loader.js" />
+    <Content Include="static\scripts\libs\angular\angular-loader.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-messages.js" />
+    <Content Include="static\scripts\libs\angular\angular-messages.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-mocks.js" />
+    <Content Include="static\scripts\libs\angular\angular-resource.js" />
+    <Content Include="static\scripts\libs\angular\angular-resource.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-route.js" />
+    <Content Include="static\scripts\libs\angular\angular-route.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-sanitize.js" />
+    <Content Include="static\scripts\libs\angular\angular-sanitize.min.js" />
+    <Content Include="static\scripts\libs\angular\angular-scenario.js" />
+    <Content Include="static\scripts\libs\angular\angular-touch.js" />
+    <Content Include="static\scripts\libs\angular\angular-touch.min.js" />
+    <Content Include="static\scripts\libs\angular\angular.js" />
+    <Content Include="static\scripts\libs\angular\angular.min.js" />
+    <Content Include="static\scripts\libs\angular\version.txt" />
+    <Content Include="static\scripts\libs\Chart.js" />
+    <Content Include="static\scripts\libs\Chart.min.js" />
+    <Content Include="static\scripts\libs\jquery-2.1.4.min.js" />
+    <Content Include="static\scripts\libs\ui-bootstrap-tpls-0.13.0.min.js" />
+    <Content Include="static\scripts\views\about.html" />
+    <Content Include="static\scripts\views\homepage.html" />
+    <Content Include="static\styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -294,24 +323,37 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="static\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="static\bootstrap\css\bootstrap.css.map" />
+    <Content Include="static\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="static\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="static\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="static\scripts\libs\.DS_Store" />
+    <Content Include="static\scripts\libs\angular\angular-animate.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-aria.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-cookies.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-loader.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-messages.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-resource.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-route.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-sanitize.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular-touch.min.js.map" />
+    <Content Include="static\scripts\libs\angular\angular.min.js.map" />
+    <Content Include="static\styles\style.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="json.json" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

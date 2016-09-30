@@ -1,0 +1,114 @@
+﻿{
+	"name": "JavaScript",
+	"children": [
+		{
+			"name": "React.js"
+		},
+		{
+			"name": "Angular.js"
+		},
+		{
+			"name": "jQuery"
+		}
+	],
+	"people": [
+		{
+			"name": "Arkadiusz Gądek"
+		},
+		{
+			"name": "Henrik Fischer Bjelland"
+		},
+		{
+			"name": "Mathias Faanes Olsen"
+		},
+		{
+			"name": "Torbjørn Mathisen"
+		}
+	],
+	"sections": [
+		{
+			"name": "Tutorials",
+			"articles": [
+				{
+					"name": "Tutorial 1",
+					"rating": 456
+				},
+				{
+					"name": "Tutorial 2",
+					"rating": 345
+				},
+				{
+					"name": "Tutorial 3",
+					"rating": 234
+				},
+				{
+					"name": "Tutorial 4",
+					"rating": 123
+				}
+			]
+		},
+		{
+			"name": "Starter kits",
+			"articles": [
+				{
+					"name": "Starter kit 1",
+					"rating": 456
+				},
+				{
+					"name": "Starter kit 2",
+					"rating": 345
+				},
+				{
+					"name": "Starter kit 3",
+					"rating": 234
+				},
+				{
+					"name": "Starter kit 4",
+					"rating": 132
+				}
+			]
+		},
+		{
+			"name": "Best practices",
+			"articles": [
+				{
+					"name": "Best practice 1",
+					"rating": 456
+				},
+				{
+					"name": "Best practice 2",
+					"rating": 345
+				},
+				{
+					"name": "Best practice 3",
+					"rating": 243
+				},
+				{
+					"name": "Best practice 4",
+					"rating": 132
+				}
+			]
+		},
+		{
+			"name": "Checklists",
+			"articles": [
+				{
+					"name": "Checklist 1",
+					"rating": 456
+				},
+				{
+					"name": "Checklist 2",
+					"rating": 334
+				},
+				{
+					"name": "Checklist 3",
+					"rating": 223
+				},
+				{
+					"name": "Checklist 4",
+					"rating": 111
+				}
+			]
+		}
+	]
+}
