@@ -2,13 +2,16 @@
 	"name": "JavaScript",
 	"children": [
 		{
-			"name": "React.js"
+			"name": "React.js",
+			"percentage": 33
 		},
 		{
-			"name": "Angular.js"
+			"name": "Angular.js",
+			"percentage": 33
 		},
 		{
-			"name": "jQuery"
+			"name": "jQuery",
+			"percentage": 34
 		}
 	],
 	"people": [
