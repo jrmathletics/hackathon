@@ -1,4 +1,20 @@
-<h1>About</h1>
-<hr/>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque corporis dolore dolores doloribus enim eos
-expedita id iure molestias nisi nostrum officia officiis quisquam, repellendus ullam, unde vel voluptatibus.
+<h1>{{category.name}}</h1>
+
+<div>
+    <h2>People who knows {{category.name}}</h2>
+    <ul>
+        <li ng-repeat="person in category.people">
+            <a href="#">{{person.name}}</a>
+        </li>
+    </ul>
+</div>
+
+<section ng-repeat="section in category.sections">
+    <h3>{{section.name}}</h3>
+    <ul>
+        <li ng-repeat="article in section.articles">
+            <a href="#">{{article.name}}</a>
+            <strong>{{article.rating}}</strong>
+        </li>
+    </ul>
+</section>
