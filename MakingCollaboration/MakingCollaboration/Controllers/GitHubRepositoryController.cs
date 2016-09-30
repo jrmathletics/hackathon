@@ -18,30 +18,10 @@ namespace MakingCollaboration.Controllers
         // GET api/<controller>
         public string Get()
         {
-            var repos = WebRequest("https://api.github.com/user/repos");
+            var repos = WebRequest("https://api.github.com/users/makingwaves/repos");
             return repos;
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
         protected String WebRequest(string url)
         {
             url += (String.IsNullOrEmpty(new Uri(url).Query) ? "?" : "&") + "access_token=" + ConfigurationManager.AppSettings.Get("GitHubAccessToken");
