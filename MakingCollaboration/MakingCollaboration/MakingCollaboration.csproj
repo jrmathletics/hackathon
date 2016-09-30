@@ -324,6 +324,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="json.json" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <PropertyGroup>
