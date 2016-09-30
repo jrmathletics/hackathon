@@ -8,6 +8,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
+using Owin.Security.Providers.GitHub;
 using MakingCollaboration.Providers;
 using MakingCollaboration.Models;
 
@@ -60,6 +61,12 @@ namespace MakingCollaboration
             //    appSecret: "");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "",
+            //    ClientSecret = ""
+            //});
+
+            //app.UseGitHubAuthentication(new GitHubAuthenticationOptions()
             //{
             //    ClientId = "",
             //    ClientSecret = ""
