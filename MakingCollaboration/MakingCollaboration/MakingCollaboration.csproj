@@ -281,7 +281,9 @@
     <Content Include="static\bootstrap\js\npm.js" />
     <Content Include="static\bootstrap\version.txt" />
     <Content Include="static\scripts\app.js" />
+    <Content Include="static\scripts\controllers\about.js" />
     <Content Include="static\scripts\controllers\homepage.js" />
+    <Content Include="static\scripts\factories\collaboration-factory.js" />
     <Content Include="static\scripts\libs\angular-chart.js" />
     <Content Include="static\scripts\libs\angular-local-storage.js" />
     <Content Include="static\scripts\libs\angular\angular-animate.js" />
@@ -354,6 +356,7 @@
     <Content Include="packages.config" />
     <Content Include="json.json" />
     <None Include="Project_Readme.html" />
+    <Content Include="static\mockdata\category.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
