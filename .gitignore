@@ -46,3 +46,5 @@ jspm_packages
 # Solution paths
 bin
 obj
+*.suo
+*.user
