@@ -49,8 +49,8 @@
 
 <div class="container main-categories">
 	<div class="row">
-        <div class="col-md-3 button">
-			<h1 ng-click="showTechUsed = !showTechUsed">Tech</h1>
+        <div class="col-md-3 button" ng-click="showTechUsed = !showTechUsed">
+			<h1>Tech</h1>
         </div>
 		<div class="col-md-5 button">
 			<h1>Design</h1>
@@ -67,7 +67,9 @@
 			<div class="col-md-12">
 				<h2>Technologies used in our company:</h2>
 				<canvas id="pie" class="chart chart-pie"
-					chart-data="data" chart-labels="labels" chart-options="options">
+					chart-data="languages.data"
+					chart-labels="languages.labels"
+					chart-options="options">
 				</canvas>
 			</div>
 		</div>
@@ -81,8 +83,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<canvas id="pie2" class="chart chart-pie"
-						chart-data="languages.data" chart-labels="languages.labels" chart-options="options">
-					</canvas>
+					    chart-data="category.childrenData.data"
+						chart-labels="category.childrenData.labels"
+						chart-options="options">
 				</div>
 			</div>
 		</div>
