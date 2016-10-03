@@ -1,8 +1,5 @@
 webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFactory', function($scope, $modal, CollaborationFactory){
-	$scope.items = ["Apple", "Orange", "Blueberry"];
-
-	$scope.labels = [".NET", "Javascript", "CSS"];
-  $scope.data = [300, 500, 100];
+	var languagesDummy = {"Python":10356,"Shell":5434,"JavaScript":2530654,"ASP":2074789,"C#":1410261,"CSS":696805,"HTML":363671,"XSLT":21945,"PHP":684040,"Smarty":4769,"TypeScript":12616,"Perl":7731,"Ruby":510,"CoffeeScript":22732};
 
 	$scope.open = function(){
 		$modal.open({
@@ -49,8 +46,8 @@ webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFacto
 	});
 
 	function mapLanguages(d) {
-		var labels = [];
-		var data = [];
+		var labels = [],
+			data = [];
 
 		for (var key in d) {
 			if (d.hasOwnProperty(key)) {
@@ -67,12 +64,15 @@ webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFacto
 	
 	CollaborationFactory.getLanguages().then(
 		function (result) {
-			$scope.languages = mapLanguages(result.data);
+			try {
+				$scope.languages = JSON.parse(result.data);
+			} catch (e) {
+				$scope.languages = mapLanguages(languagesDummy);
+			}
 			console.log($scope.languages);
 		},
 		function () {
-			var languages = {"Python":10356,"Shell":5434,"JavaScript":2530654,"ASP":2074789,"C#":1410261,"CSS":696805,"HTML":363671,"XSLT":21945,"PHP":684040,"Smarty":4769,"TypeScript":12616,"Perl":7731,"Ruby":510,"CoffeeScript":22732};
-			$scope.languages = mapLanguages(languages);
+			$scope.languages = mapLanguages(languagesDummy);
 			console.log($scope.languages);
 		}
 	);
