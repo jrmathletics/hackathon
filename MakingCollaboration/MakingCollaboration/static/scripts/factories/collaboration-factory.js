@@ -4,7 +4,7 @@ webApp.factory('CollaborationFactory', ['$q', '$http', function ($q, $http){
             getLanguages: function () {
                 return $http({
                     method: 'GET',
-                    url: '/api/languages'
+                    url: 'http://hackathongroup2.azurewebsites.net/api/languages'
                 })
             },
             getCategory: function (name) {
