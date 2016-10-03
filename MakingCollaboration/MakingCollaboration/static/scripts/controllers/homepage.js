@@ -48,5 +48,30 @@ webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFacto
 		$scope.category = result.data;
 	});
 	
+	CollaborationFactory.getLanguages().then(
+		function (result) {
+			$scope.languages = result.data;
+			console.log($scope.languages);
+		},
+		function () {
+			var languages = {"Python":10356,"Shell":5434,"JavaScript":2530654,"ASP":2074789,"C#":1410261,"CSS":696805,"HTML":363671,"XSLT":21945,"PHP":684040,"Smarty":4769,"TypeScript":12616,"Perl":7731,"Ruby":510,"CoffeeScript":22732};
+
+			var labels = [];
+			var data = [];
+
+			for (var key in languages) {
+				if (languages.hasOwnProperty(key)) {
+					labels.push(key);
+					data.push(languages[key]);
+				}
+			}
+
+			$scope.languages = {
+				labels: labels,
+				data: data
+			};
+		}
+	);
+	
 	//$scope.open();
 }]);
