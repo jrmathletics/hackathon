@@ -65,7 +65,7 @@ webApp.controller('HomepageController', ['$scope', '$modal', 'CollaborationFacto
 	CollaborationFactory.getLanguages().then(
 		function (result) {
 			try {
-				$scope.languages = JSON.parse(result.data);
+				$scope.languages = mapLanguages(JSON.parse(result.data));
 			} catch (e) {
 				$scope.languages = mapLanguages(languagesDummy);
 			}
